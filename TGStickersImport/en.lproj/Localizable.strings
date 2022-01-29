@@ -1,0 +1,82 @@
+/* 
+  Localizable.strings
+  TGStickersImport
+
+  Created by Dmitry Starkov on 01/07/2021.
+  
+*/
+
+"start" = "Start making stickers";
+"stickerType" = "Choose the type of stickers";
+"animated" = "Animated Face";
+"static" = "Image (Beta)";
+"staticStickerTitle" = "Image Stickers";
+"back" = "Back";
+"optional" = "Optional";
+//"type" = "Aa.. (optional)";
+"tshirtText" = "T-Shirt Text"; // Type something on T-Shirt
+"tshirtTextLimit" = "3 to 6 letters allowed";
+"generate" = "Generate Stickers";
+"tshirtColor" = "T-Shirt Color";
+"done" = "Done";
+"done!" = "Done!";
+"settings" = "Settings";
+"camera" = "Camera";
+"install" = "Install";
+"export" = "Export";
+"exportTitle" = "Export Stickers";
+"exportTitlePad" = "Export\nStickers";
+"exportTitleTG" = "Telegram Stickers";
+"exportTitlePadTG" = "Telegram\nStickers";
+"exportTitleWA" = "WhatsApp Stickers";
+"exportTitlePadWA" = "WhatsApp\nStickers";
+"mainMenu" = "Main Menu";
+"add" = "Add";
+"icloud" = "iCloud Sync";
+"animations" = "Animations";
+"selectExport" = "Stickers for ..."; // Export to..
+"preferredMessenger" = "Preferred Messenger";
+"empty" = "Let's create an awesome stickers";
+"background" = "Removing Background..";
+//"appName" = "Avatar Stickers";
+"stickerType" = "Choose the type of stickers";
+"colorPalette" = "Color palette";
+"select" = "Select Stickers";
+"tryAgain" = "Try again";
+"noFace" = "No face\ndetected";
+"noFaceLined" = "No face detected";
+"delete" = "Delete";
+"network" = "No network";
+"notInstalled" = "Please, install the\nTelegram app";
+"noWhatsApp" = "Please, install the\nWhatsApp";
+
+"male" = "Male";
+"female" = "Female";
+
+"clothesColor" = "Clothes color";
+"textColor" = "Text color";
+"skinColor" = "Skin color";
+"hairColor" = "Hair color";
+
+"recognition1" = "Detecting Face";
+"recognition2" = "Defining Colors";
+"recognition3" = "Processing";
+
+"removeAds" = "Remove all Ads";
+"verifying" = "Verifying"; // Verifying...
+"processing" = "Processing"; // Processing...
+"subscriptionDescription" = "The subscription will auto-renew after selected period. You can cancel it any time.";
+"subscribed" = "Thanks!\nYou're subscribed.";
+"dismiss" = "Dismiss"; // "Close"
+
+"privacy" = "Privacy Policy";
+"terms" = "Terms of Service"; // Terms of Use
+
+"deletionTitle" = "Confirmation";
+"deletionDescription" = "This action is not reversible"; // Confirm deletion
+"cancel" = "Cancel";
+"delete" = "Delete";
+
+"warning" = "Warning";
+"restart" = "The changes will be applied after restarting the application";
+"ok" = "Ok";

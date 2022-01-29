@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="100%" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" xmlns:vectornator="http://vectornator.io" version="1.1" viewBox="0 0 1024 1024">
+<metadata>
+<vectornator:setting key="DimensionsVisible" value="1"/>
+<vectornator:setting key="PencilOnly" value="0"/>
+<vectornator:setting key="SnapToPoints" value="0"/>
+<vectornator:setting key="OutlineMode" value="0"/>
+<vectornator:setting key="CMYKEnabledKey" value="0"/>
+<vectornator:setting key="RulersVisible" value="1"/>
+<vectornator:setting key="SnapToEdges" value="0"/>
+<vectornator:setting key="GuidesVisible" value="1"/>
+<vectornator:setting key="DisplayWhiteBackground" value="0"/>
+<vectornator:setting key="doHistoryDisabled" value="0"/>
+<vectornator:setting key="SnapToGuides" value="1"/>
+<vectornator:setting key="TimeLapseWatermarkDisabled" value="0"/>
+<vectornator:setting key="Units" value="Pixels"/>
+<vectornator:setting key="DynamicGuides" value="0"/>
+<vectornator:setting key="IsolateActiveLayer" value="0"/>
+<vectornator:setting key="SnapToGrid" value="0"/>
+</metadata>
+<defs/>
+<g id="main" vectornator:layerName="main">
+<path stroke="#2b2b2b" stroke-width="4" d="M949.852+73.0789C919.259+85.1661+50.8966+451.284+50.8966+451.284C50.8966+451.284+8.84144+465.664+12.1758+492.214C15.5103+518.764+49.8129+530.934+49.8129+530.934L273.301+606.167C273.301+606.167+340.781+827.446+354.077+869.46C367.373+911.515+378.002+912.516+378.002+912.516C390.339+917.892+401.634+909.306+401.634+909.306L546.056+777.639L771.17+950.236C832.023+976.786+854.155+921.477+854.155+921.477L1009.25+126.888C1023+65.3681+982.154+60.3665+949.852+73.0789Z" fill="#2b2b2b" stroke-linecap="butt" opacity="1" stroke-linejoin="miter"/>
+</g>
+</svg>

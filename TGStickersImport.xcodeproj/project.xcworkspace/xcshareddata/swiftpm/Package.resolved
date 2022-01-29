@@ -1,0 +1,106 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ChameleonFramework",
+        "repositoryURL": "https://github.com/starkdmi/ChameleonFramework",
+        "state": {
+          "branch": "main",
+          "revision": "71b36b0dbbd09b923c9e948b73d2492ea6097a68",
+          "version": null
+        }
+      },
+      {
+        "package": "Gzip",
+        "repositoryURL": "https://github.com/1024jp/GzipSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "ba0b6cb51cc6202f896e469b87d2889a46b10d1b",
+          "version": "5.1.1"
+        }
+      },
+      {
+        "package": "libwebp",
+        "repositoryURL": "https://github.com/SDWebImage/libwebp-Xcode.git",
+        "state": {
+          "branch": null,
+          "revision": "2b3b43faaef54d1b897482428428357b7f7cd08b",
+          "version": "1.2.1"
+        }
+      },
+      {
+        "package": "Lottie",
+        "repositoryURL": "https://github.com/starkdmi/lottie-ios.git",
+        "state": {
+          "branch": "master",
+          "revision": "27056be2c69b3df2e7be816afcad265df70b81ec",
+          "version": null
+        }
+      },
+      {
+        "package": "PryntTrimmerView",
+        "repositoryURL": "https://github.com/HHK1/PryntTrimmerView",
+        "state": {
+          "branch": null,
+          "revision": "ac1b60a22c7e6a6514de7a66d2f3d5b537c956d5",
+          "version": "4.0.2"
+        }
+      },
+      {
+        "package": "SDWebImage",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
+        "state": {
+          "branch": null,
+          "revision": "0fff0d7505b5306348263ea64fcc561253bbeb21",
+          "version": "5.12.2"
+        }
+      },
+      {
+        "package": "SDWebImageSwiftUI",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImageSwiftUI",
+        "state": {
+          "branch": null,
+          "revision": "cd8625b7cf11a97698e180d28bb7d5d357196678",
+          "version": "2.0.2"
+        }
+      },
+      {
+        "package": "SDWebImageWebPCoder",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImageWebPCoder",
+        "state": {
+          "branch": null,
+          "revision": "95a6838df13bc08d8064cf7e048b787b6e52348d",
+          "version": "0.8.4"
+        }
+      },
+      {
+        "package": "Stevia",
+        "repositoryURL": "https://github.com/freshOS/Stevia",
+        "state": {
+          "branch": null,
+          "revision": "e1e8dc40deab3a863a35a7a0aab10f7304f4b42a",
+          "version": "5.1.0"
+        }
+      },
+      {
+        "package": "TelegramStickersImport",
+        "repositoryURL": "https://github.com/TelegramMessenger/TelegramStickersImport",
+        "state": {
+          "branch": null,
+          "revision": "a0ec85bbb5fb88e393c38967110e566355bbf463",
+          "version": "1.0.1"
+        }
+      },
+      {
+        "package": "YPImagePicker",
+        "repositoryURL": "https://github.com/starkdmi/YPImagePicker",
+        "state": {
+          "branch": "spm",
+          "revision": "3727a0326a277c7714ec8bf0fb6dc6f995f5be72",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

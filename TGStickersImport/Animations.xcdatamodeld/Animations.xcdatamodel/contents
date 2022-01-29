@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="21A5506j" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Sticker" representedClassName="Sticker" syncable="YES" codeGenerationType="class">
+        <attribute name="animation" optional="YES" attributeType="Binary"/>
+        <attribute name="emotion" optional="YES" attributeType="String"/>
+        <relationship name="origin" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StickerSet" inverseName="stickers" inverseEntity="StickerSet"/>
+    </entity>
+    <entity name="StickerSet" representedClassName="StickerSet" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="source" optional="YES" attributeType="String"/>
+        <relationship name="stickers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sticker" inverseName="origin" inverseEntity="Sticker"/>
+    </entity>
+    <configuration name="Cloud" usedWithCloudKit="YES">
+        <memberEntity name="Sticker"/>
+        <memberEntity name="StickerSet"/>
+    </configuration>
+    <configuration name="Local">
+        <memberEntity name="Sticker"/>
+        <memberEntity name="StickerSet"/>
+    </configuration>
+    <elements>
+        <element name="Sticker" positionX="-45" positionY="27" width="128" height="74"/>
+        <element name="StickerSet" positionX="-63" positionY="-18" width="128" height="74"/>
+    </elements>
+</model>

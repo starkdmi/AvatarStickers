@@ -1,0 +1,62 @@
+{
+  "device_frame_version": "latest",
+  "default": {
+    "keyword": {
+      "font": "./fonts/Montserrat-Black.ttf",
+      "color": "#ffffff"
+    },
+    "title": {
+      "font": "./fonts/Pacifico-Regular.ttf",
+      "font_size": 128,
+      "color": "#ffffff"
+    },
+    "background": "./fcfbff.jpeg",
+    "padding": 50,
+    "show_complete_frame": false,
+    "stack_title" : true, "stack_title_comment": "true: display the keyword above the title, false: in one line",
+    "title_below_image": true,
+    "frame": "SILVER",
+    "use_platform": "IOS"
+  },
+
+  "data": [
+    {
+      "filter": "GalleryView",
+      "keyword": {
+        "text": "GALLERY",
+        "font_size": 172
+      },
+      "title": {
+          "text": "available without network connection"
+      },
+      "background": "./9378ff.jpeg",
+      "padding": "32x144",
+      "title_below_image": false
+    },
+    {
+      "filter": "RecognitionView",
+      "keyword": {
+        "text": "AI POWER",
+        "color": "#9378ff"
+      },
+      "title": {
+          "text": "face aware personalized avatar",
+          "color": "#9378ff"
+      },
+      "padding": "42x42"
+    },
+    {
+      "filter": "SelectionView",
+      "keyword": {
+        "text": "EXPORT",
+        "font_size": 172
+      },
+      "title": {
+          "text": "customizable sticker packs"
+      },
+      "background": "./ff5353.jpeg",
+      "padding": "32x144",
+      "title_below_image": false
+    }
+  ]
+}

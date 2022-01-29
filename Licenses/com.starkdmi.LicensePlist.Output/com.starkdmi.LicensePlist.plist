@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Title</key>
+			<string>Licenses</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.starkdmi.LicensePlist/chameleon</string>
+			<key>Title</key>
+			<string>Chameleon Framework</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.starkdmi.LicensePlist/Gee-Me Illustrations</string>
+			<key>Title</key>
+			<string>Gee-Me Illustrations</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.starkdmi.LicensePlist/GzipSwift</string>
+			<key>Title</key>
+			<string>GzipSwift</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.starkdmi.LicensePlist/LicensePlist</string>
+			<key>Title</key>
+			<string>License Plist</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.starkdmi.LicensePlist/lottie-ios</string>
+			<key>Title</key>
+			<string>Lottie</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.starkdmi.LicensePlist/py-avataaars</string>
+			<key>Title</key>
+			<string>Avataaars</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.starkdmi.LicensePlist/SDWebImageSwiftUI</string>
+			<key>Title</key>
+			<string>SDWebImage</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.starkdmi.LicensePlist/stickers</string>
+			<key>Title</key>
+			<string>WhatsApp Stickers</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.starkdmi.LicensePlist/TelegramStickersImport</string>
+			<key>Title</key>
+			<string>Telegram Stickers Import</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.starkdmi.LicensePlist/UIImageColors</string>
+			<key>Title</key>
+			<string>UIImageColors</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.starkdmi.LicensePlist/YPImagePicker</string>
+			<key>Title</key>
+			<string>ImagePicker by Yummypets</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+	</array>
+</dict>
+</plist>

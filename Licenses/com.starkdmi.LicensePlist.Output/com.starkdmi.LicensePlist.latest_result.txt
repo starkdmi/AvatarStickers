@@ -1,0 +1,66 @@
+name: chameleon, nameSpecified: Chameleon Framework, owner: vicc, version: 2.2.0
+
+name: chameleon, nameSpecified: Chameleon Framework, owner: vicc, version: 2.2.0
+
+name: GzipSwift, nameSpecified: , owner: 1024jp, version: 5.1.1
+
+name: GzipSwift, nameSpecified: , owner: 1024jp, version: 5.1.1
+
+name: LicensePlist, nameSpecified: License Plist, owner: mono0926, version: 3.13.0
+
+name: LicensePlist, nameSpecified: License Plist, owner: mono0926, version: 3.13.0
+
+name: lottie-ios, nameSpecified: Lottie, owner: airbnb, version: 3.2.3
+
+name: lottie-ios, nameSpecified: Lottie, owner: airbnb, version: 3.2.3
+
+name: py-avataaars, nameSpecified: Avataaars, owner: kebu, version: 1.1.2
+
+name: py-avataaars, nameSpecified: Avataaars, owner: kebu, version: 1.1.2
+
+name: SDWebImageSwiftUI, nameSpecified: SDWebImage, owner: SDWebImage, version: 2.0.2
+
+name: SDWebImageSwiftUI, nameSpecified: SDWebImage, owner: SDWebImage, version: 2.0.2
+
+name: stickers, nameSpecified: WhatsApp Stickers, owner: WhatsApp, version: 
+
+name: stickers, nameSpecified: WhatsApp Stickers, owner: WhatsApp, version: 
+
+name: TelegramStickersImport, nameSpecified: Telegram Stickers Import, owner: TelegramMessenger, version: 1.0.1
+
+name: TelegramStickersImport, nameSpecified: Telegram Stickers Import, owner: TelegramMessenger, version: 1.0.1
+
+name: UIImageColors, nameSpecified: , owner: jathu, version: 2.2.0
+
+name: UIImageColors, nameSpecified: , owner: jathu, version: 2.2.0
+
+name: YPImagePicker, nameSpecified: ImagePicker by Yummypets, owner: Yummypets, version: 4.5.0
+
+name: YPImagePicker, nameSpecified: ImagePicker by Yummypets, owner: Yummypets, version: 4.5.0
+
+name: py-avataaars, nameSpecified: Avataaars, owner: kebu, version: 1.1.2
+
+name: LicensePlist, nameSpecified: License Plist, owner: mono0926, version: 3.13.0
+
+name: lottie-ios, nameSpecified: Lottie, owner: airbnb, version: 3.2.3
+
+name: GzipSwift, nameSpecified: , owner: 1024jp, version: 5.1.1
+
+name: TelegramStickersImport, nameSpecified: Telegram Stickers Import, owner: TelegramMessenger, version: 1.0.1
+
+name: stickers, nameSpecified: WhatsApp Stickers, owner: WhatsApp, version: 
+
+name: SDWebImageSwiftUI, nameSpecified: SDWebImage, owner: SDWebImage, version: 2.0.2
+
+name: YPImagePicker, nameSpecified: ImagePicker by Yummypets, owner: Yummypets, version: 4.5.0
+
+name: chameleon, nameSpecified: Chameleon Framework, owner: vicc, version: 2.2.0
+
+name: UIImageColors, nameSpecified: , owner: jathu, version: 2.2.0
+
+name: Gee-Me Illustrations, nameSpecified: , version: 
+body:  Attribution 4.0 Int…
+
+add-version-numbers: false
+
+LicensePlist Version: 3.13.0

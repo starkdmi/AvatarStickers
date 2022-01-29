@@ -1,0 +1,26 @@
+https://www.apptamin.com/app-previews/guide-app-previews/
+
+frame rate 
+ffmpeg -i iPhon11ProMax_886_sound.mp4 -filter:v fps=fps=30 iPhon11ProMax_886_sound_30fps.mp4
+
+scale 886:1920 for iphoneX, 1200:1600 for ipad (iphone8 1080:1920 QuickTime)
+ffmpeg -i iPhon11ProMax.mp4 -vf scale=886:1920 iPhon11ProMax_886.mp4
+
+add sound 
+ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -i iPhon11ProMax_886.mp4 -shortest -c:v copy -c:a aac iPhon11ProMax_886_sound.mp4
+
+concat two videos (to increase lenght)
+ffmpeg -f concat -safe 0 -i fileList.txt -c copy iphone11_3_long.mp4
+
+full steps
+ffmpeg -i iphone11.mp4 -vf scale=886:1920 iphone11_886.mp4
+ffmpeg -i iphone11_886.mp4 -filter:v fps=fps=30 iphone11_886_30fps.mp4
+ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -i iphone11_886_30fps.mp4 -shortest -c:v copy -c:a aac iphone11_886_30fps_sound.mp4
+
+ffmpeg -i iPhone8.mov -filter:v fps=fps=30 iPhone8_30fps.mov
+ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -i iPhone8_30fps.mov -shortest -c:v copy -c:a aac iPhone8_30fps_sound.mov
+
+ipad
+ffmpeg -i ipad_2.mp4 -vf scale=1200:1600 ipad_2_scaled.mp4
+ffmpeg -i ipad_2_scaled.mp4 -filter:v fps=fps=30 ipad_2_scaled_30fps.mp4
+ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -i ipad_2_scaled_30fps.mp4 -shortest -c:v copy -c:a aac ipad_2_scaled_30fps_sound.mp4

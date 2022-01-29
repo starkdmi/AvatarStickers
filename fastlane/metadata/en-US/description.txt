@@ -1,0 +1,15 @@
+Сreate a personalized avatar based on your facial features and bring it to life in a multitude of emotions. Each emotion has several animations behind it. Together they make a perfect sticker set to express your feelings while chatting though Telegram and WhatsApp messengers.
+
+Features:
+- Generate animated stickers
+- In-app stickers preview 
+- Export to Telegram and WhatsApp
+- Sync your collections with iCloud
+- Share raw files (Lottie, TGS and WebP)
+- Explore without network connection
+
+Face recognition used to generate animated avatars based on facial features. 
+AI determine gender, skin tone, facial hair style, hair style and color using selfies.
+Personal data received from AI will NOT be stored after the stickers set is ready and will NOT be shared with third parties.
+
+The application was created while participating in the contest - https://contest.com/sticker-app
