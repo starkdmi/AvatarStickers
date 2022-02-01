@@ -10,7 +10,7 @@
 - **Available without network connection (Except the export)**
 
 ## Screenshots
-| Version | Gallery | Recognition | Selection | Intro | Settings | Launch | 
+|  Version  |  Gallery  | Recognition | Selection  |   Intro   | Settings  |   Launch   | 
 | --- | --- | --- | --- | --- | --- | --- | 
 | **1.0** | <img src='Screenshots/v1.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-01GalleryView09.png' width="118" height="256"/> | <img src='Screenshots/v1.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-02RecognitionView.png' width="118" height="256"/> | <img src='Screenshots/v1.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-03SelectionViewSimulator.png' width="118" height="256"/> | | | |
 | **2.0** | <img src='Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-01GalleryView09.png' width="118" height="256"/> | <img src='Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-02RecognitionView.png' width="118" height="256"/> | <img src='Screenshots/v2.0/iPhone%2011%20Pro%20Max/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%20Select.png' width="118" height="256"/> | <img src='Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-IntroView.png' width="118" height="256"/> | <img src='Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-SettingsView.png' width="118" height="256"/> | <img src='Screenshots/v2.0/LaunchScreen.png' width="118" height="256"/> |
