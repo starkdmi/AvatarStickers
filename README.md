@@ -1,17 +1,13 @@
 ## About
-[Avatar Stickers](https://apps.apple.com/us/app/avatar-stickers/id1574023061) - iOS application that allows you to create an animated stickers and export them to Telegram and WhatsApp messengers. The application was created while participating in the [contest](https://contest.com/sticker-app). Server code is available [here](https://github.com/starkdmi/AvatarStickersServer).
+[**Avatar Stickers**](https://apps.apple.com/us/app/avatar-stickers/id1574023061) - iOS application that allows you to create an animated stickers and export them to **Telegram** and **WhatsApp** messengers. The application was created while participating in the [contest](https://contest.com/sticker-app). Server code is available [here](https://github.com/starkdmi/AvatarStickersServer).
 
 ## Features
-- Generate animated stickers
-- In-app stickers preview
-- Export to Telegram and WhatsApp
-- Sync your collections with iCloud
-- Share raw files (Lottie and TGS)
-- Available without network connection (Except the export)
-
-
-
-
+- **Generate animated stickers**
+- **In-app stickers preview**
+- **Export to Telegram and WhatsApp**
+- **Sync your collections with iCloud**
+- **Share raw files (Lottie and TGS)**
+- **Available without network connection (Except the export)**
 
 ## Screenshots
 | Version | Gallery | Recognition | Selection | Intro | Settings | Launch | 
@@ -20,7 +16,18 @@
 | **2.0** | <img src='Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-01GalleryView09.png' height="256"/> | <img src='Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-02RecognitionView.png' height="256"/> | <img src='Screenshots/v2.0/iPhone%2011%20Pro%20Max/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%20Select.png' height="256"/> | <img src='Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-IntroView.png' height="256"/> | <img src='Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-SettingsView.png' height="256"/> | <img src='Screenshots/v2.0/LaunchScreen.png' height="256"/> |
 | **Video** | [<img alt="GalleryView Record" src="Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-01GalleryView09.png" height="256">](https://user-images.githubusercontent.com/21260939/152046454-5ebee789-474c-400b-8943-0c323cee3d0a.mp4) | [<img alt="RecognitionView Record" src="Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-02RecognitionView.png" height="256">](https://user-images.githubusercontent.com/21260939/152052647-e8679f3a-bb93-47dd-a6a6-c30f36276f89.mp4) | [<img alt="SelectionView Record" src="Screenshots/v2.0/iPhone%2011%20Pro%20Max/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%20Select.png" height="256">](https://user-images.githubusercontent.com/21260939/152047833-5f4f3756-1cff-4d74-841a-cd0399edeb42.mp4) | [<img alt="IntroView Record" src="Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-IntroView.png" height="256">](https://user-images.githubusercontent.com/21260939/152047995-23906c22-6fae-40a9-8f5b-09710cad83a8.mp4) | | |
 
-
+## Xcode Previews
+With power of SwiftUI the previews works as expected.
+<table align="center">
+    <tr>
+        <td align="center"><img height="348px" alt="Xcode IntroView" src="https://user-images.githubusercontent.com/21260939/152054776-fc7e7f19-6bbe-4635-81c1-b215cd8f0200.png"></td>
+        <td align="center"><img height="348px" alt="Xcode ContentView" src="https://user-images.githubusercontent.com/21260939/152057189-a7a24a46-0164-45b4-b016-1d12d5730da5.png"></td>
+    </tr>
+    <tr>
+        <td align="center"><img height="348px" alt="Xcode RecognitionView" src="https://user-images.githubusercontent.com/21260939/152057114-4a8649ee-497a-4427-bfae-2649f7fba297.png"></td>
+        <td align="center"><img height="348px" alt="Xcode GalleryView" src="https://user-images.githubusercontent.com/21260939/152056861-c930803f-a55c-4a88-93e7-3b36730134cf.png"></td>
+    </tr>
+</table>
 
 ## Dev Stack 
 - SwiftUI
@@ -29,12 +36,15 @@
 - Core ML
 - Fastlane
 
-## Schemes
-- **Debug:** Mocked animations and network requests (no server)
-- **Local:** Requests in local network. Used in pair with local server
-- **Release:** App Store 
+## Build
+Clone the project and open it in Xcode. Xcode will download Swift Packages automatically. You will need to provide an iCloud identifier in **TGStickersImport.entitlements** for Core Data cloud synchronization.
 
-## CoreML
+## Schemes
+- **Debug** - Mocked animations and network requests (no server)
+- **Local** - Requests in local network. Used in pair with local server
+- **Release** - App Store 
+
+## Core ML
 Most of the ML models were created using CreateML and public datasets. 10K images used per class which can also be improved.
 
 ## TODO
