@@ -10,10 +10,11 @@
 - Available without network connection (Except the export)
 
 ## Screenshots
-| Version | Gallery | Recognition | Selection | Launch | Onboarding | Camera | Settings | 
-| --- | --- | --- | --- | --- | --- | --- | --- | 
-| 1.0 | ![GalleryView v1.0](Screenshots/v1.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-01GalleryView09.png) | ![RecognitionView v1.0](Screenshots/v1.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-02RecognitionView.png) | ![SelectionView v1.0](Screenshots/v1.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-03SelectionViewSimulator.png) | | | | |
-| 2.0 | ![GalleryView v2.0](Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-01GalleryView09.png) | ![RecognitionView v2.0](Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-02RecognitionView.png) | ![SelectionView v2.0](Screenshots/v2.0/iPhone%2011%20Pro%20Max/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%20Select.png) | | | | |
+| Version | Gallery | Recognition | Selection | Launch | Intro | Settings | 
+| --- | --- | --- | --- | --- | --- | --- | 
+| **1.0** | ![GalleryView v1.0](Screenshots/v1.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-01GalleryView09.png) | ![RecognitionView v1.0](Screenshots/v1.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-02RecognitionView.png) | ![SelectionView v1.0](Screenshots/v1.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-03SelectionViewSimulator.png) | | | |
+| **2.0** | ![GalleryView v2.0](Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-01GalleryView09.png) | ![RecognitionView v2.0](Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-02RecognitionView.png) | ![SelectionView v2.0](Screenshots/v2.0/iPhone%2011%20Pro%20Max/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%20Select.png) | ![LaunchScreen v2.0](Screenshots/v2.0/LaunchScreen.png) | ![IntroView v2.0](Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-IntroView.png) | ![SettingsView v2.0](Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-SettingsView.png) |
+| **Video** | [![GalleryView Record](Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-01GalleryView09.png)](Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhon11ProMax_886_sound_30fps.mp4) | | ![SelectionView Record](Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhon11ProMax2_886_sound_30fps.mp4) | | ![IntroView Record](Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-IntroView.mp4) | | 
 
 ## Dev Stack 
 - SwiftUI
