@@ -48,9 +48,19 @@ Clone the project and open it in Xcode. Xcode will download Swift Packages autom
 Most of the ML models were created using CreateML and public datasets. 10K images used per class which can also be improved.
 
 ## TODO
-- Server API Key Security (using Configuration file)
-- Export to different Telegram apps (non-official)
-- Accessebility
+- [ ] Server API Key Security (using Configuration file)
+- [ ] Export to different Telegram apps (non-official)
+- [ ] Accessebility
+
+## App Store
+- Application main features was released during **Telegram contest from June 25 to July 4**. 
+- The application was published in App Store in **August 2021** (after two weeks review). 
+- In **Semptember** new updates were blocked due the **Guideline 4.3 - Design**
+ 
+    >Same feature set as other apps submitted to the App Store
+- In **January 2022** I've decided to **Open Source** it.
+
+The application is still in App Store and available for **free** but will not receive any updates because of the App Store vague rules.
 
 ## Licenses
 - [Lottie](https://github.com/airbnb/lottie-ios) - Apache 2.0
