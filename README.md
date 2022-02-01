@@ -9,12 +9,18 @@
 - Share raw files (Lottie and TGS)
 - Available without network connection (Except the export)
 
+
+
+
+
 ## Screenshots
-| Version | Gallery | Recognition | Selection | Launch | Intro | Settings | 
+| Version | Gallery | Recognition | Selection | Intro | Settings | Launch | 
 | --- | --- | --- | --- | --- | --- | --- | 
-| **1.0** | ![GalleryView v1.0](Screenshots/v1.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-01GalleryView09.png) | ![RecognitionView v1.0](Screenshots/v1.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-02RecognitionView.png) | ![SelectionView v1.0](Screenshots/v1.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-03SelectionViewSimulator.png) | | | |
-| **2.0** | ![GalleryView v2.0](Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-01GalleryView09.png) | ![RecognitionView v2.0](Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-02RecognitionView.png) | ![SelectionView v2.0](Screenshots/v2.0/iPhone%2011%20Pro%20Max/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%20Select.png) | ![LaunchScreen v2.0](Screenshots/v2.0/LaunchScreen.png) | ![IntroView v2.0](Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-IntroView.png) | ![SettingsView v2.0](Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-SettingsView.png) |
-| **Video** | [![GalleryView Record](Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-01GalleryView09.png)](Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhon11ProMax_886_sound_30fps.mp4) | | ![SelectionView Record](Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhon11ProMax2_886_sound_30fps.mp4) | | ![IntroView Record](Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-IntroView.mp4) | | 
+| **1.0** | <img src='Screenshots/v1.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-01GalleryView09.png' height="256"/> | <img src='Screenshots/v1.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-02RecognitionView.png' height="256"/> | <img src='Screenshots/v1.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-03SelectionViewSimulator.png' height="256"/> | | | |
+| **2.0** | <img src='Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-01GalleryView09.png' height="256"/> | <img src='Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-02RecognitionView.png' height="256"/> | <img src='Screenshots/v2.0/iPhone%2011%20Pro%20Max/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%20Select.png' height="256"/> | <img src='Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-IntroView.png' height="256"/> | <img src='Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-SettingsView.png' height="256"/> | <img src='Screenshots/v2.0/LaunchScreen.png' height="256"/> |
+| **Video** | [<img alt="GalleryView Record" src="Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-01GalleryView09.png" height="256">](https://user-images.githubusercontent.com/21260939/152046454-5ebee789-474c-400b-8943-0c323cee3d0a.mp4) | [<img alt="RecognitionView Record" src="Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-02RecognitionView.png" height="256">](https://user-images.githubusercontent.com/21260939/152052647-e8679f3a-bb93-47dd-a6a6-c30f36276f89.mp4) | [<img alt="SelectionView Record" src="Screenshots/v2.0/iPhone%2011%20Pro%20Max/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%20Select.png" height="256">](https://user-images.githubusercontent.com/21260939/152047833-5f4f3756-1cff-4d74-841a-cd0399edeb42.mp4) | [<img alt="IntroView Record" src="Screenshots/v2.0/iPhone%2011%20Pro%20Max/iPhone%2011%20Pro%20Max-IntroView.png" height="256">](https://user-images.githubusercontent.com/21260939/152047995-23906c22-6fae-40a9-8f5b-09710cad83a8.mp4) | | |
+
+
 
 ## Dev Stack 
 - SwiftUI
