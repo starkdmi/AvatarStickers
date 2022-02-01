@@ -31,9 +31,10 @@ With power of SwiftUI the previews works as expected including mocked animations
 
 ## Dev Stack 
 - SwiftUI
-- Swift Package Manager (SPM)
+- Combine
 - Core Data
 - Core ML
+- Swift Package Manager
 - Fastlane
 
 ## Build
