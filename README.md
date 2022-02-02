@@ -51,7 +51,7 @@ Most of the ML models were created using CreateML and public datasets. 10K image
 ## TODO
 - [ ] Server API Key Security (using Configuration file)
 - [ ] Export to different Telegram apps (non-official)
-- [ ] Accessebility
+- [ ] Accessibility
 
 ## App Store
 - Application main features was released during **Telegram contest from June 25 to July 4**. 
