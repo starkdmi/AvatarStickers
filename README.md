@@ -59,6 +59,7 @@ Most of the ML models were created using CreateML and public datasets. 10K image
 - In **Semptember** new updates were blocked due the **Guideline 4.3 - Design**
  
     >Same feature set as other apps submitted to the App Store
+- In **November Telegram** paid **750$** for the **3rd place** in the **Sticker App Contest**.
 - In **January 2022** I've decided to **Open Source** it.
 
 The application is still in App Store and available for **free** but will not receive any updates because of the App Store vague rules.
