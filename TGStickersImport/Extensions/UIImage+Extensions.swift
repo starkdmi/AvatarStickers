@@ -9,7 +9,14 @@ import UIKit
 import Chameleon
 
 extension UIImage {
-        
+    
+    ///  Calculate the average color and find the nearest one from provided colors list
+    /// - Parameters:
+    ///   - colors: List of colors from which one will be selected
+    ///   - skin: Does the image contains the skin part
+    ///   - completion: Function with two colors
+    ///     `UIColor` - Average color detected from image
+    ///     `UIColor` - Nearest color to average one from colors list
     func preferredColor(using colors: [UIColor?] = [], skin: Bool = false, _ completion: @escaping (UIColor?, UIColor?) -> Void) {
         DispatchQueue.global(qos: .userInteractive).async {
             let imageColors = NSArray(ofColorsFrom: self, withFlatScheme: false) as! [UIColor]
@@ -73,7 +80,10 @@ extension UIImage {
             completion(mainColor, minimal.color)
         }
     }
-   
+    
+    /// Apply gradinet to current image
+    /// - Parameter colorsArr: Gradient colors
+    /// - Returns: Image with the gradient effect
     func tintedWithLinearGradientColors(colorsArr: [CGColor]) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
         guard let context = UIGraphicsGetCurrentContext() else {
@@ -103,7 +113,11 @@ extension UIImage {
         return gradientImage ?? self
     }
     
-    /*func rotate(radians: CGFloat) -> UIImage? {
+    /*
+    /// Rotate image
+    /// - Parameter radians: Angle of rotation
+    /// - Returns: Rotated Image
+    func rotate(radians: CGFloat) -> UIImage? {
         var newSize = CGRect(origin: CGPoint.zero, size: self.size).applying(CGAffineTransform(rotationAngle: radians)).size
         // Trim off the extremely small float value to prevent core graphics from rounding it up
         newSize.width = floor(newSize.width)

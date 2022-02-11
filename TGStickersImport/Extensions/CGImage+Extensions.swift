@@ -8,6 +8,13 @@
 import UIKit
 
 extension CGImage {
+    /// Resize image
+    /// - Parameters:
+    ///   - imageWidth: Original image width
+    ///   - imageHeight: Original image height
+    ///   - maxWidth: Expected image width
+    ///   - maxHeight: Expected image height
+    /// - Returns: Resized image
     func resized(imageWidth: Float? = nil, imageHeight: Float? = nil, maxWidth: Float = 512.0, maxHeight: Float = 512.0) -> CGImage? {
         var ratio: Float = 0.0
         let imageWidth = imageWidth ?? Float(self.width)
@@ -41,6 +48,11 @@ extension CGImage {
         return context.makeImage()
     }
     
+    /// Generate image with solid color
+    /// - Parameters:
+    ///   - color: Color for every pixel in resulted image
+    ///   - size: Size of resulted image
+    /// - Returns: Colored Image
     class func generate(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) -> CGImage? {
         let rect = CGRect(origin: .zero, size: size)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
@@ -51,7 +63,11 @@ extension CGImage {
         return image?.cgImage
     }
     
-    /*func rotated(radians: CGFloat) -> CGImage? {
+    /*
+    /// Rotate image
+    /// - Parameter radians: Angle of rotation
+    /// - Returns: Rotated Image
+    func rotated(radians: CGFloat) -> CGImage? {
         let size = CGSize(width: self.width, height: self.height)
         
         var newSize = CGRect(origin: .zero, size: size).applying(CGAffineTransform(rotationAngle: radians)).size

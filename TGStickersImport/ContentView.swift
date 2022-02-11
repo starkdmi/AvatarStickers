@@ -10,11 +10,6 @@ import SwiftUI
 struct ContentView: View {
     @AppStorage("isFirstRun") var isFirstRun: Bool = true
             
-    // init() {
-    // Reset state
-    // UserDefaults.standard.setValue(true, forKey: "isFirstRun")
-    // }
-    
     var body: some View {
         NavigationView {
             Group {

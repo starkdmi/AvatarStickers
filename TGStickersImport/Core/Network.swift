@@ -26,6 +26,9 @@ struct Network {
     #endif
     
     #if DEBUG
+    /// Mocked animation network call.
+    /// - Parameter json: Face features in JSON format
+    /// - Returns: Mocked animation data or the data returned by Local Server based on `CommandLine.arguments` values
     static func load(for json: [String: Any]) throws -> AnyPublisher<Data, NetworkError> {
         if CommandLine.arguments.contains("-LOCAL") {
             guard let data = try? JSONSerialization.data(withJSONObject: json) else {
@@ -76,6 +79,9 @@ struct Network {
         }
     }
     #else
+    /// Load animation from server based on face features provided
+    /// - Parameter json: Face features in JSON format
+    /// - Returns: Animation data
     static func load(for json: [String: Any]) throws -> AnyPublisher<Data, NetworkError> {
         guard let data = try? JSONSerialization.data(withJSONObject: json) else {
             throw NetworkError.arguments

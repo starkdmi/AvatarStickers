@@ -8,6 +8,13 @@
 import SwiftUI
 
 extension String {
+    /// Generate image from string
+    /// Used for Emoji based images
+    /// - Parameters:
+    ///   - fontSize: Font Size
+    ///   - bgColor: Background Color
+    ///   - imageSize: Image Size
+    /// - Returns: Generated Image
     func image(fontSize: CGFloat = 40, bgColor: UIColor = UIColor.clear, imageSize: CGSize? = nil) -> UIImage? {
            let font = UIFont.systemFont(ofSize: fontSize)
            let attributes = [NSAttributedString.Key.font: font]

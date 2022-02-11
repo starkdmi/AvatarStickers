@@ -44,6 +44,11 @@ class RecognitionViewModel: ObservableObject {
             .store(in: &cancellableSet)
     }
     
+    /// Recognize all person features using AI models
+    /// The process is asynchronious and waits for all the model interferences to complete
+    /// - Parameters:
+    ///   - cgImage: Original person image
+    ///   - completion: Boolean result of process
     func recognize(_ cgImage: CGImage, completion: @escaping (Bool) -> Void) {
         
         let mock: Bool

@@ -16,6 +16,9 @@ struct AvatarKeys {
     static let emotions: [String] = ["😂", "❤️", "😍", "✨", "😇", "😊", "😉", "😐", "😡", "😔", "😭", "🏀", "⚽️"]
     #endif
     
+    /// Convert face features into format readable by Server
+    /// - Parameter parameters: Original pairs of key value features
+    /// - Returns: Modified pairs of key value features
     static func processKeys(_ parameters: [String: String]) -> [String: String] {
         var data = parameters
         
@@ -157,6 +160,11 @@ struct AvatarKeys {
         return data
     }
     
+    /// Add the face features based on emotion provided
+    /// - Parameters:
+    ///   - emotion: Sticker emotion
+    ///   - data: Original pairs of key value features
+    /// - Returns: Modified pairs of key value features
     static func processEmotions(_ emotion: String, with data: [String: String]) -> [String: String] {
         var parameters = data
         

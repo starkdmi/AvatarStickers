@@ -36,7 +36,13 @@ struct FaceRecognition {
     }
     
     static var faceModel: VNCoreMLModel? = try? VNCoreMLModel(for: FaceParsing().model)
-
+    
+    /// Convert AI model segmentation output into array of separeted face parts
+    /// - Parameters:
+    ///   - segmenation: Array of colored pixels, each Color is equals to some `FaceKey`
+    ///   - original: Unmodified Ai model input image
+    ///   - data: Array of `ProcessData` which defines which parts shoul be proceed and be in output array
+    /// - Returns: Array of pairs `FaceKey` and `CGImage` which contains proceed face parts
     static func processFaceParts(of segmenation: Array<Int32>, with original: CGImage, for data: [ProcessData]) -> [FaceKey: CGImage] {
         let colorSpace       = CGColorSpaceCreateDeviceRGB()
         let width            = 512 // inputCGImage.width
@@ -104,6 +110,11 @@ struct FaceRecognition {
         return results
     }
     
+    /// Run the model interferense
+    /// - Parameters:
+    ///   - image: Image to be proceed via AI model
+    ///   - data: Array of `ProcessData` which defines which parts shoul be proceed and be in output array
+    ///   - completion: Function which will process recognized face parts. Gets array of pairs `FaceKey` and `CGImage` as argument.
     static func processFace(_ image: CGImage, using data: [ProcessData], _ completion: @escaping ([FaceKey: CGImage]) -> Void) {
         DispatchQueue.global(qos: .userInteractive).async {
             
@@ -127,6 +138,7 @@ struct FaceRecognition {
 
                 let segmentationArray = Array(buffer)
                             
+                // Convert into readable array of separated face parts
                 let results = processFaceParts(of: segmentationArray, with: image, for: data)
                 completion(results)
             }

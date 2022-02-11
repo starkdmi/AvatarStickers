@@ -9,6 +9,13 @@ import UIKit
 import Vision
 
 struct FaceRectangleDetection {
+    
+    /// Detect the face rectangle from image
+    /// - Parameters:
+    ///   - image: Image to be proceed
+    ///   - completion: Function to proceed the results which includes
+    ///     `CGRect` - Face rectangle
+    ///     `CGFloat` - Angle of face rotation
     static func detect(_ image: CGImage, _ completion: @escaping (CGRect, CGFloat) -> Void) {
         let bounds = CGRect(x: 0, y: 0, width: image.width, height: image.height)
                

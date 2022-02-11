@@ -17,6 +17,9 @@ struct PersonRecognition {
         case empty
     }
     
+    /// Recognize the face features using multiple AI models
+    /// - Parameter image: Image which contains face
+    /// - Returns: Array of pairs with the features keys and values
     static func detectAll(_ image: CGImage) -> Future<[String: String], AIError> {
         Future { promise in
             let ciImage = CIImage(cgImage: image)

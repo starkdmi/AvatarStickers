@@ -20,6 +20,12 @@ struct ColorsRecognition {
         UIColor(hexString: "#614336"), // BLACK
     ]
     
+    /// Calculate the average color of skin
+    /// - Parameters:
+    ///   - image: Face image
+    ///   - completion:
+    ///     `String` - Detected color in hex format
+    ///     `String` - Nearest value to predefined colors from `skinColors`, in hex format
     static func skinColor(_ image: UIImage, _ completion: @escaping (String, String) -> Void) {
         image.preferredColor(using: skinColors, skin: true) { original, color in
             completion(original?.hexValue() ?? "", color?.hexValue() ?? "#F8D25C")
@@ -45,6 +51,13 @@ struct ColorsRecognition {
         UIColor(hexString: "#FFFFFF"), // WHITE
     ]
     
+    /// Calculate the average color of body clothes
+    /// - Parameters:
+    ///   - image: Human image
+    ///   - completion:
+    ///     `String` - Detected color in hex format
+    ///     `String` - Nearest value to predefined colors from `clothesColors`, in hex format
+    ///     `String` - Preferred Text color, in hex format
     static func clothesColor(_ image: UIImage, _ completion: @escaping (String, String, String) -> Void) {
         image.preferredColor(using: clothesColors) { original, color in
             let textColor = textColor(color ?? UIColor(hexString: "#FFFFFF")!)
@@ -72,6 +85,12 @@ struct ColorsRecognition {
         UIColor(hexString: "#E8E1E2"), // SILVER_GRAY
     ]
     
+    /// Calculate the average hair color
+    /// - Parameters:
+    ///   - image: Face image
+    ///   - completion:
+    ///     `String` - Detected color in hex format
+    ///     `String` - Nearest value to predefined colors from `hairColors`, in hex format
     static func hairColor(_ image: UIImage, _ completion: @escaping (String, String) -> Void) {
         image.preferredColor(using: hairColors) { original, color in
             completion(original?.hexValue() ?? "", color?.hexValue() ?? "#2C1B18")
