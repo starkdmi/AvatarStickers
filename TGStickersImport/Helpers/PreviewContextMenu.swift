@@ -82,7 +82,6 @@ struct PreviewContextView<Destination: View, Preview: View>: UIViewRepresentable
         }
         
         func contextMenuInteraction(_ interaction: UIContextMenuInteraction, willPerformPreviewActionForMenuWith configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionCommitAnimating) {
-
             self.onCommit()
         }
     }
