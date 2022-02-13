@@ -188,25 +188,25 @@ platform :ios do
     )
   end
 
-  desc "CI: Tests"
-  lane :test_ci do
-   scan(
-      devices: [
-        # "iPhone 13 mini",
-        "iPhone SE (2nd generation)", 
-      ],
-      scheme: "TGStickersRelease",
-      # testplan: "",
-      skip_build: true, 
-      output_directory: "fastlane/tests",
-      output_types: "html",
-      clean: true,
-      code_coverage: true, 
-      derived_data_path: "fastlane/tests/data/",   
-      # slack_message: "Build #{testflight_build_number} Tests",
-      slack_default_payloads: [:lane, :git_branch, :git_author, :last_git_commit_hash], # :last_git_commit, :test_result  
-    )
-  end
+  # desc "CI: Tests"
+  # lane :test_ci do
+  #  scan(
+  #     devices: [
+  #       # "iPhone 13 mini",
+  #       "iPhone SE (2nd generation)", 
+  #     ],
+  #     scheme: "TGStickersRelease",
+  #     # testplan: "",
+  #     skip_build: true, 
+  #     output_directory: "fastlane/tests",
+  #     output_types: "html",
+  #     clean: true,
+  #     code_coverage: true, 
+  #     derived_data_path: "fastlane/tests/data/",   
+  #     # slack_message: "Build #{testflight_build_number} Tests",
+  #     slack_default_payloads: [:lane, :git_branch, :git_author, :last_git_commit_hash], # :last_git_commit, :test_result  
+  #   )
+  # end
 
   desc "Build, Test and upload application to TestFlight via CI"
   lane :testflight_ci do
@@ -218,7 +218,7 @@ platform :ios do
     
     build_ci
 
-    test_ci
+    # test_ci
     
     # ISSUE: Could not find option 'workspace' in the list of available options
     # https://github.com/fastlane-community/xcov/issues/191
