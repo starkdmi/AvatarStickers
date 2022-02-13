@@ -6,7 +6,7 @@
 - [x] **In-app stickers preview**
 - [x] **Export to Telegram and WhatsApp**
 - [x] **Sync sticker collections with iCloud**
-- [x] **Share raw files (Lottie and TGS)**
+- [x] **Share raw files (Lottie, TGS and WebP)**
 - [x] **Available without network connection (Except the export)**
 
 ## Screenshots
