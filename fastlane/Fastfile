@@ -145,7 +145,7 @@ platform :ios do
   desc "CI: Sign Application"
   private_lane :sign_ci do
     match(
-      readonly: true, 
+      readonly: false, 
       generate_apple_certs: true, # Apple Development or Apple Distribution
       git_url: ENV["MATCH_GIT_URL"],
       git_branch: "main",
@@ -159,7 +159,7 @@ platform :ios do
       use_automatic_signing: false,
       path: "TGStickersImport.xcodeproj",
       code_sign_identity: "Apple Distribution",
-      profile_name: ENV["sigh_com.starkdmi.TGStickersImport_appstore_profile-name"],
+      profile_name: ENV["sigh_com.starkdmi.TGStickersImport_appstore_profile-name"], #
     )
 
     update_project_provisioning(
