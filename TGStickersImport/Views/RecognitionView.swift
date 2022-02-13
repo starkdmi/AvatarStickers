@@ -13,6 +13,7 @@ typealias Color = SwiftUI.Color
 typealias Animation = SwiftUI.Animation
 
 struct RecognitionView: View {
+    @StateObject private var keyboardObserver = KeyboardObserver()
     @StateObject private var model = RecognitionViewModel()
     
     @Binding var image: UIImage?
@@ -28,7 +29,7 @@ struct RecognitionView: View {
     @State private var gotoWhatsApp = false
     
     static let loadingAnimation = Lottie.Animation.named("recognition")
-        
+            
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [.grass, .sea]), startPoint: .bottomLeading, endPoint: .topTrailing)
@@ -72,7 +73,8 @@ struct RecognitionView: View {
                             }
                         }
                     }
-                } 
+                }
+                
                 Spacer()
                 
                 VStack {
@@ -182,83 +184,85 @@ struct RecognitionView: View {
                     .aspectRatio(1.0, contentMode: .fit)
                     .offset(y: -20)
                     
-                    VStack(spacing: 16) {
-                        if done {
-                            HStack {
-                                Spacer()
-                                ColorPicker("hairColor", selection: $model.hairColor, supportsOpacity: false)
-                                    .font(.system(size: 24).weight(.heavy))
-                                    .multilineTextAlignment(.center)
-                                    .lineLimit(1)
-                                    .foregroundColor(Color.night)
-                                Spacer()
-                            }
-                            
-                            HStack {
-                                Spacer()
-                                ColorPicker("skinColor", selection: $model.skinColor, supportsOpacity: false)
-                                    .font(.system(size: 24).weight(.heavy))
-                                    .multilineTextAlignment(.center)
-                                    .lineLimit(1)
-                                    .foregroundColor(Color.night)
-                                Spacer()
-                            }
-                                
-                            HStack {
-                                Spacer()
-                                ColorPicker("clothesColor", selection: $model.bodyColor, supportsOpacity: false)
-                                    .font(.system(size: 24).weight(.heavy))
-                                    .multilineTextAlignment(.center)
-                                    .lineLimit(1)
-                                    .foregroundColor(Color.night)
-                                    .onChange(of: model.bodyColor) { color in
-                                        if model.textColor == model.defaultTextColor, color != .clear, let cgColor = color.cgColor {
-                                            let clothesColor = UIColor(cgColor: cgColor)
-                                            let textColor = ColorsRecognition.textColor(clothesColor)
-                                            let color = Color(textColor)
-                                            model.textColor = color
-                                            model.defaultTextColor = color
-                                        }
-                                  }
-                                Spacer()
-                            }
-                            
-                            if UIDevice.current.userInterfaceIdiom == .phone && UIScreen.main.bounds.height > 700 {
+                    if (keyboardObserver.keyboardHeight == 0) {
+                        VStack(spacing: 16) {
+                            if done {
                                 HStack {
                                     Spacer()
-                                    ColorPicker("textColor", selection: $model.textColor, supportsOpacity: false)
+                                    ColorPicker("hairColor", selection: $model.hairColor, supportsOpacity: false)
                                         .font(.system(size: 24).weight(.heavy))
                                         .multilineTextAlignment(.center)
                                         .lineLimit(1)
                                         .foregroundColor(Color.night)
                                     Spacer()
                                 }
-                            }
-                        } else {
-                            if UIDevice.current.userInterfaceIdiom == .phone && UIScreen.main.bounds.height > 700 { Spacer() }
-                            if noFace {
-                                // Error Message
-                                Text(UIDevice.current.userInterfaceIdiom == .phone && UIScreen.main.bounds.height > 700 ? "noFaceLined" : "noFace")
-                                    .font(Font.system(size: 32).weight(.heavy))
-                                    .foregroundColor(Color.night.opacity(0.94))
-                                    .multilineTextAlignment(.center)
+                                
+                                HStack {
+                                    Spacer()
+                                    ColorPicker("skinColor", selection: $model.skinColor, supportsOpacity: false)
+                                        .font(.system(size: 24).weight(.heavy))
+                                        .multilineTextAlignment(.center)
+                                        .lineLimit(1)
+                                        .foregroundColor(Color.night)
+                                    Spacer()
+                                }
+                                    
+                                HStack {
+                                    Spacer()
+                                    ColorPicker("clothesColor", selection: $model.bodyColor, supportsOpacity: false)
+                                        .font(.system(size: 24).weight(.heavy))
+                                        .multilineTextAlignment(.center)
+                                        .lineLimit(1)
+                                        .foregroundColor(Color.night)
+                                        .onChange(of: model.bodyColor) { color in
+                                            if model.textColor == model.defaultTextColor, color != .clear, let cgColor = color.cgColor {
+                                                let clothesColor = UIColor(cgColor: cgColor)
+                                                let textColor = ColorsRecognition.textColor(clothesColor)
+                                                let color = Color(textColor)
+                                                model.textColor = color
+                                                model.defaultTextColor = color
+                                            }
+                                      }
+                                    Spacer()
+                                }
+                                
+                                if UIDevice.current.userInterfaceIdiom == .phone && UIScreen.main.bounds.height > 700 {
+                                    HStack {
+                                        Spacer()
+                                        ColorPicker("textColor", selection: $model.textColor, supportsOpacity: false)
+                                            .font(.system(size: 24).weight(.heavy))
+                                            .multilineTextAlignment(.center)
+                                            .lineLimit(1)
+                                            .foregroundColor(Color.night)
+                                        Spacer()
+                                    }
+                                }
                             } else {
-                                // Loading
-                                if let animation = Self.loadingAnimation {
-                                    LottieView(animation: animation)
-                                        .frame(minWidth: 140, minHeight: 140)
+                                if UIDevice.current.userInterfaceIdiom == .phone && UIScreen.main.bounds.height > 700 { Spacer() }
+                                if noFace {
+                                    // Error Message
+                                    Text(UIDevice.current.userInterfaceIdiom == .phone && UIScreen.main.bounds.height > 700 ? "noFaceLined" : "noFace")
+                                        .font(Font.system(size: 32).weight(.heavy))
+                                        .foregroundColor(Color.night.opacity(0.94))
+                                        .multilineTextAlignment(.center)
                                 } else {
-                                    ProgressView().progressViewStyle(CircularProgressViewStyle(tint: Color.night))
+                                    // Loading
+                                    if let animation = Self.loadingAnimation {
+                                        LottieView(animation: animation)
+                                            .frame(minWidth: 140, minHeight: 140)
+                                    } else {
+                                        ProgressView().progressViewStyle(CircularProgressViewStyle(tint: Color.night))
+                                    }
                                 }
                             }
                         }
+                        .frame(height: 80)
+                        .padding(.top, UIDevice.current.userInterfaceIdiom == .phone && UIScreen.main.bounds.height > 700 ? 36 : 16)
+                        .padding(.bottom, 8)
+                        .offset(y: -8)
+                        .padding(.leading, UIScreen.main.bounds.width > 600 ? 80 : 28)
+                        .padding(.trailing, UIScreen.main.bounds.width > 600 ? 80 : 28)
                     }
-                    .frame(height: 80)
-                    .padding(.top, UIDevice.current.userInterfaceIdiom == .phone && UIScreen.main.bounds.height > 700 ? 36 : 16)
-                    .padding(.bottom, 8)
-                    .offset(y: -8)
-                    .padding(.leading, UIScreen.main.bounds.width > 600 ? 80 : 28)
-                    .padding(.trailing, UIScreen.main.bounds.width > 600 ? 80 : 28)
                 }
                 .padding()
                 
@@ -270,67 +274,69 @@ struct RecognitionView: View {
                 NavigationLink(destination: NavigationLazyView(AnimatedStickersView(parameters: model.exportParameters, image: $image)), isActive: $gotoWhatsApp) {
                     EmptyView()
                 }
-                NavigationLink(destination: NavigationLazyView(AnimatedStickersView(parameters: model.exportParameters, image: $image))) {
-                    RoundedRectangle(cornerRadius: 60)
-                        .fill(
-                            LinearGradient(gradient: Gradient(colors: [Color(red: 35/255, green: 43/255, blue: 43/255), Color.night]), startPoint: .bottomLeading, endPoint: .topTrailing)
-                        )
-                        .frame(width: 260, height: 54)
-                        .shadow(color: .love, radius: done ? 5 : 0, x: 0, y: 0)
-                        .overlay(
-                            Group {
-                                if (done && model.isStringValid) {
-                                    Text("generate")
-                                        .font(.system(size: 22).weight(.bold))
-                                        .gradientForeground(colors: [.fire, .love])
-                                } else {
-                                    Text("generate")
-                                        .font(.system(size: 22).weight(.bold))
-                                        .foregroundColor(.gray)
-                                        .opacity(0.25)
+                if (keyboardObserver.keyboardHeight == 0) {
+                    NavigationLink(destination: NavigationLazyView(AnimatedStickersView(parameters: model.exportParameters, image: $image))) {
+                        RoundedRectangle(cornerRadius: 60)
+                            .fill(
+                                LinearGradient(gradient: Gradient(colors: [Color(red: 35/255, green: 43/255, blue: 43/255), Color.night]), startPoint: .bottomLeading, endPoint: .topTrailing)
+                            )
+                            .frame(width: 260, height: 54)
+                            .shadow(color: .love, radius: done ? 5 : 0, x: 0, y: 0)
+                            .overlay(
+                                Group {
+                                    if (done && model.isStringValid) {
+                                        Text("generate")
+                                            .font(.system(size: 22).weight(.bold))
+                                            .gradientForeground(colors: [.fire, .love])
+                                    } else {
+                                        Text("generate")
+                                            .font(.system(size: 22).weight(.bold))
+                                            .foregroundColor(.gray)
+                                            .opacity(0.25)
+                                    }
                                 }
-                            }
-                        )
-                        .padding(.bottom, 36)
-                }
-                .disabled(!done)
-                .onLongPressGesture(pressing: { state in
-                    longPressed = state
-                    if done {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                            if longPressed {
-                                withAnimation(.linear.delay(0.25)) {
-                                    done = false
-                                }
-                                self.showingActionSheet = true
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.125) {
-                                    self.done = true
+                            )
+                            .padding(.bottom, 36)
+                    }
+                    .disabled(!done || !model.isStringValid)
+                    .onLongPressGesture(pressing: { state in
+                        longPressed = state
+                        if done && model.isStringValid {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                if longPressed {
+                                    withAnimation(.linear.delay(0.25)) {
+                                        done = false
+                                    }
+                                    self.showingActionSheet = true
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.125) {
+                                        self.done = true
+                                    }
                                 }
                             }
                         }
-                    }
 
-                }, perform: {
-                    longPressed = false
-                })
-                .actionSheet(isPresented: $showingActionSheet) {
-                    var buttons: [ActionSheet.Button] = [
-                        .default(Text("Telegram")) { self.model.isTelegram = true; self.gotoTelegram = true }
-                    ]
-                    let whatsapp = ActionSheet.Button.default(Text("WhatsApp")) { self.model.isTelegram = false; self.gotoWhatsApp = true }
-                    
-                    #if DEBUG
-                    if CommandLine.arguments.contains("-LOCAL") {
+                    }, perform: {
+                        longPressed = false
+                    })
+                    .actionSheet(isPresented: $showingActionSheet) {
+                        var buttons: [ActionSheet.Button] = [
+                            .default(Text("Telegram")) { self.model.isTelegram = true; self.gotoTelegram = true }
+                        ]
+                        let whatsapp = ActionSheet.Button.default(Text("WhatsApp")) { self.model.isTelegram = false; self.gotoWhatsApp = true }
+                        
+                        #if DEBUG
+                        if CommandLine.arguments.contains("-LOCAL") {
+                            buttons.append(whatsapp)
+                        } else {
+                            // WhatsApp mockup animations does not exists yet
+                        }
+                        #else
                         buttons.append(whatsapp)
-                    } else {
-                        // WhatsApp mockup animations does not exists yet
+                        #endif
+                        
+                        buttons.append(.cancel())
+                        return ActionSheet(title: Text("selectExport"), buttons: buttons)
                     }
-                    #else
-                    buttons.append(whatsapp)
-                    #endif
-                    
-                    buttons.append(.cancel())
-                    return ActionSheet(title: Text("selectExport"), buttons: buttons)
                 }
             }
         }

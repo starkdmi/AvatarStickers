@@ -84,6 +84,7 @@
 		1DA74B7A268F81AD00FD2849 /* AvatarKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA74B79268F81AD00FD2849 /* AvatarKeys.swift */; };
 		1DA74B7E269182AA00FD2849 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DA74B7C269182AA00FD2849 /* loading.json */; };
 		1DB7D93126F5014800821A32 /* Chameleon in Frameworks */ = {isa = PBXBuildFile; productRef = 1DB7D93026F5014800821A32 /* Chameleon */; };
+		1DBD559927B9369A0023A8D3 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBD559827B9369A0023A8D3 /* KeyboardObserver.swift */; };
 		1DCD2EF526A2197C004C5A4F /* recognition.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DCD2EF326A2197C004C5A4F /* recognition.json */; };
 		1DEF4B8C2698CC69001A65E6 /* StickersGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEF4B8B2698CC69001A65E6 /* StickersGalleryView.swift */; };
 		1DF2551926A72478001F69E7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1DF2551826A72478001F69E7 /* Settings.bundle */; };
@@ -199,6 +200,7 @@
 		1DA74B77268F7FE600FD2849 /* ColorsRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsRecognition.swift; sourceTree = "<group>"; };
 		1DA74B79268F81AD00FD2849 /* AvatarKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarKeys.swift; sourceTree = "<group>"; };
 		1DA74B7C269182AA00FD2849 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		1DBD559827B9369A0023A8D3 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 		1DCD2EF326A2197C004C5A4F /* recognition.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recognition.json; sourceTree = "<group>"; };
 		1DD8596826E78D0E00CD8F91 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1DEF4B8B2698CC69001A65E6 /* StickersGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickersGalleryView.swift; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 				1D8E5B71269C351200C71161 /* PreviewContextMenu.swift */,
 				1D195DC926F26EFB00C74169 /* UINavigationBarGradientView.swift */,
 				1D15877226A1B9EE0018AEE1 /* PersonShape.swift */,
+				1DBD559827B9369A0023A8D3 /* KeyboardObserver.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -625,6 +628,7 @@
 				1DEF4B8C2698CC69001A65E6 /* StickersGalleryView.swift in Sources */,
 				1D660CF127A42BA200E3BC06 /* RecognitionViewModel.swift in Sources */,
 				1D23500D26DE1923002A3899 /* Interoperability.swift in Sources */,
+				1DBD559927B9369A0023A8D3 /* KeyboardObserver.swift in Sources */,
 				1D195DCA26F26EFB00C74169 /* UINavigationBarGradientView.swift in Sources */,
 				1DA74B52268F23AC00FD2849 /* CameraView.swift in Sources */,
 				1D0A477A2692FB72007B9D0D /* UpdateML.swift in Sources */,
