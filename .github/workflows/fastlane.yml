@@ -21,8 +21,11 @@ jobs:
         MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }} 
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
 
+        APPLE_ID: ${{ secrets.APPLE_ID }}
+        ITC_TEAM_ID: ${{ secrets.ITC_TEAM_ID }} 
+        TEAM_ID: ${{ secrets.TEAM_ID }}
         KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
 
         SLACK_URL: ${{ secrets.SLACK_URL }}
       run: |
-        fastlane testflight_ci --verbose
+        fastlane testflight_ci --verbose        
