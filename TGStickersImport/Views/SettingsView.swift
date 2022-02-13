@@ -83,7 +83,6 @@ struct SettingsView: View {
                 HStack(spacing: 24) {
                     Link("privacy", destination: URL(string: "https://facemotion.herokuapp.com/privacy")!)
                     Link("terms", destination: URL(string: "https://facemotion.herokuapp.com/terms")!)
-                    
                 }
                 .font(Font.system(size: 14))
                 .foregroundColor(.white.opacity(0.25))
