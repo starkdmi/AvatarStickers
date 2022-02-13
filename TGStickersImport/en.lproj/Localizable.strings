@@ -7,10 +7,6 @@
 */
 
 "start" = "Start making stickers";
-"stickerType" = "Choose the type of stickers";
-"animated" = "Animated Face";
-"static" = "Image (Beta)";
-"staticStickerTitle" = "Image Stickers";
 "back" = "Back";
 "optional" = "Optional";
 //"type" = "Aa.. (optional)";
@@ -62,11 +58,6 @@
 "recognition2" = "Defining Colors";
 "recognition3" = "Processing";
 
-"removeAds" = "Remove all Ads";
-"verifying" = "Verifying"; // Verifying...
-"processing" = "Processing"; // Processing...
-"subscriptionDescription" = "The subscription will auto-renew after selected period. You can cancel it any time.";
-"subscribed" = "Thanks!\nYou're subscribed.";
 "dismiss" = "Dismiss"; // "Close"
 
 "privacy" = "Privacy Policy";
