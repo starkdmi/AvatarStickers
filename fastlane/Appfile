@@ -1,8 +1,8 @@
 app_identifier("com.starkdmi.TGStickers") # The bundle identifier of your app
-apple_id("XXXXX") # Your Apple email address
+apple_id(ENV["APPLE_ID"]) # Your Apple email address
 
-itc_team_id("XXXXX") # App Store Connect Team ID
-team_id("XXXXX") # Developer Portal Team ID
+itc_team_id(ENV["ITC_TEAM_ID"]) # App Store Connect Team ID
+team_id(ENV["TEAM_ID"]) # Developer Portal Team ID
 
 # For more information about the Appfile, see:
 # https://docs.fastlane.tools/advanced/#appfile
