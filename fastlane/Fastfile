@@ -159,12 +159,12 @@ platform :ios do
       use_automatic_signing: false,
       path: "TGStickersImport.xcodeproj",
       code_sign_identity: "Apple Distribution",
-      profile_name: ENV["sigh_com.starkdmi.TGStickersImport_appstore_profile-name"], #
+      profile_name: ENV["sigh_com.starkdmi.TGStickers_appstore_profile-name"], 
     )
 
     update_project_provisioning(
       xcodeproj: "TGStickersImport.xcodeproj",
-      profile: ENV["sigh_com.starkdmi.TGStickersImport_appstore_profile-path"], # .mobileprovision file path
+      profile: ENV["sigh_com.starkdmi.TGStickers_appstore_profile-path"], # .mobileprovision file path
       build_configuration: "Release",
       code_signing_identity: "Apple Distribution"
     )
