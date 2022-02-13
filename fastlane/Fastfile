@@ -13,14 +13,18 @@
 # Disable metrics
 opt_out_usage
 
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
 default_platform(:ios)
 
 platform :ios do
     before_all do
       app_store_connect_api_key(
-        key_id: "XXXXX", # App Manager Role
-        issuer_id: "XXXXX",
-        key_filepath: "/Users/XXXXX/AuthKey_XXXXX.p8",
+        key_id: ENV["APP_STORE_CONNECT_KEY_ID"],
+        issuer_id: ENV["APP_STORE_CONNECT_ISSUER_ID"],
+        key_content: ENV["APP_STORE_CONNECT_API_KEY_BASE64"],
+        is_key_content_base64: true,
         in_house: false
       )
     end
@@ -28,8 +32,8 @@ platform :ios do
   desc "Verify and update signing certificates"
   lane :sign do
     match(
-      readonly: false, # do not verify certificates on Apple Developer Portal
-      git_url: "https://github.com/XXXXX/AppleCertificates.git",
+      readonly: true, # do not verify certificates on Apple Developer Portal
+      git_url: ENV["MATCH_GIT_URL"],
       git_branch: "main",
       app_identifier: "com.starkdmi.TGStickers",
       type: "appstore"
@@ -42,8 +46,8 @@ platform :ios do
     sign
 
     gym(
-      scheme: "TGStickersImport",
-      # configuration: "Release",
+      scheme: "TGStickersRelease",
+      configuration: "Release",
       # clean: true,
       # silent: true,
       export_method: "app-store",
@@ -111,4 +115,136 @@ platform :ios do
       precheck_include_in_app_purchases: false
     )
   end
+
+  ### Github Actions ###
+
+  desc "CI: Initialize Fastlane"
+  private_lane :init_ci do
+    app_store_connect_api_key(
+      key_id: ENV["APP_STORE_CONNECT_KEY_ID"],
+      issuer_id: ENV["APP_STORE_CONNECT_ISSUER_ID"],
+      key_content: ENV["APP_STORE_CONNECT_API_KEY_BASE64"],
+      is_key_content_base64: true,
+      in_house: false
+    )
+
+    create_keychain(
+      name: "tgstickers_app_keychain",
+      password: ENV["KEYCHAIN_PASSWORD"],
+      default_keychain: true,
+      unlock: true,
+      timeout: 3600,
+    )
+  end
+
+  desc "CI: Deinitialize Fastlane" # Machine will be destroyes anyway
+  private_lane :deinit_ci do
+    delete_keychain(name: "tgstickers_app_keychain")
+  end
+
+  desc "CI: Sign Application"
+  private_lane :sign_ci do
+    match(
+      readonly: true, 
+      generate_apple_certs: true, # Apple Development or Apple Distribution
+      git_url: ENV["MATCH_GIT_URL"],
+      git_branch: "main",
+      app_identifier: "com.starkdmi.TGStickers",
+      type: "appstore",
+      keychain_name: "tgstickers_app_keychain",
+      keychain_password: ENV["KEYCHAIN_PASSWORD"],
+    )
+
+    update_code_signing_settings(
+      use_automatic_signing: false,
+      path: "TGStickersImport.xcodeproj",
+      code_sign_identity: "Apple Distribution",
+      profile_name: ENV["sigh_com.starkdmi.TGStickersImport_appstore_profile-name"],
+    )
+
+    update_project_provisioning(
+      xcodeproj: "TGStickersImport.xcodeproj",
+      profile: ENV["sigh_com.starkdmi.TGStickersImport_appstore_profile-path"], # .mobileprovision file path
+      build_configuration: "Release",
+      code_signing_identity: "Apple Distribution"
+    )
+  end
+
+  desc "CI: Build"
+  private_lane :build_ci do
+    # increment_build_number
+    sign_ci
+
+    gym(
+      scheme: "TGStickersRelease", # TGStickersImport
+      configuration: "Release",
+      codesigning_identity: "Apple Distribution",
+      export_options: {
+         method: "app-store",
+         signingStyle: "manual",
+      },
+      output_directory: "./build/",
+      output_name: "TGStickers.ipa"
+    )
+  end
+
+  desc "CI: Tests"
+  lane :test_ci do
+   scan(
+      devices: [
+        # "iPhone 13 mini",
+        "iPhone SE (2nd generation)", 
+      ],
+      scheme: "TGStickersRelease",
+      # testplan: "",
+      skip_build: true, 
+      output_directory: "fastlane/tests",
+      output_types: "html",
+      clean: true,
+      code_coverage: true, 
+      derived_data_path: "fastlane/tests/data/",   
+      # slack_message: "Build #{testflight_build_number} Tests",
+      slack_default_payloads: [:lane, :git_branch, :git_author, :last_git_commit_hash], # :last_git_commit, :test_result  
+    )
+  end
+
+  desc "Build, Test and upload application to TestFlight via CI"
+  lane :testflight_ci do
+    init_ci
+
+    testflight_build_number = increment_build_number({
+      build_number: latest_testflight_build_number + 1
+    })
+    
+    build_ci
+
+    test_ci
+    
+    # ISSUE: Could not find option 'workspace' in the list of available options
+    # https://github.com/fastlane-community/xcov/issues/191
+    # xcov(
+    #   project: "./TGStickersImport.xcodeproj",
+    #   scheme: "TGStickersRelease",
+    #   derived_data_path: "fastlane/tests/data/",
+    #   output_directory: "fastlane/tests/xcov"
+    # )
+
+    upload_to_testflight(
+      skip_submission: true,
+      skip_waiting_for_build_processing: true,
+    )
+
+    slack(
+      message: "Build #{testflight_build_number} was distributed to TestFlight",
+      success: true,
+      default_payloads: [:lane, :git_branch, :git_author, :last_git_commit, :last_git_commit_hash], # :test_result
+      payload: { 
+        # "Build Date" => Time.new.to_s,
+        "Delivered by" => "Github Actions",
+      }
+    )
+
+    deinit_ci
+  end
+
 end
