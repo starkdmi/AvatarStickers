@@ -44,13 +44,13 @@ struct ExportView: View {
                     
             if installed && (isTelegram || (isTelegram == false && UIDevice.current.userInterfaceIdiom == .phone)) {
                 Text(UIDevice.current.userInterfaceIdiom == .pad ? "exportTitlePad" : "exportTitle")
-                    .kerning(UIDevice.current.userInterfaceIdiom == .pad ? 20 : 8)
-                    .font(Font.system(size: UIDevice.current.userInterfaceIdiom == .pad ? 72 : isTelegram ? 52 : 56).weight(.heavy))
+                    .kerning(UIDevice.current.userInterfaceIdiom == .pad ? 20 : 4)
+                    .font(Font.system(size: UIDevice.current.userInterfaceIdiom == .pad ? 72 : 52).weight(.heavy))
                     .gradientForeground(colors: [Color(red: 35/255, green: 43/255, blue: 43/255), Color.night])
                     .multilineTextAlignment(.center)
                     .padding(.leading, 30)
                     .padding(.trailing, 30)
-                    .padding(.top, UIDevice.current.userInterfaceIdiom == .pad || UIScreen.main.bounds.height < 700 ? 20 : 32)
+                    .padding(.top, UIScreen.main.bounds.height < 700 ? 20 : UIDevice.current.userInterfaceIdiom == .pad ? 64 : 32)
                 
                 Spacer()
 

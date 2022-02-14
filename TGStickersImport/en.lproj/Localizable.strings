@@ -20,8 +20,8 @@
 "camera" = "Camera";
 "install" = "Install";
 "export" = "Export";
-"exportTitle" = "Export Stickers";
-"exportTitlePad" = "Export\nStickers";
+"exportTitle" = "EXPORT STICKERS"; // "Export Stickers"
+"exportTitlePad" = "EXPORT\nSTICKERS"; // "Export\nStickers"
 "exportTitleTG" = "Telegram Stickers";
 "exportTitlePadTG" = "Telegram\nStickers";
 "exportTitleWA" = "WhatsApp Stickers";
